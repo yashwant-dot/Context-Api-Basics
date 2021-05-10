@@ -1,7 +1,7 @@
-import Navbar from './components/Navbar';
-import Booklist from './components/Booklist';
+import Navbar, { NavbarFunctional } from './components/Navbar';
+import Booklist, { BooklistFunctional } from './components/Booklist';
+import ThemeToggler, { ThemeTogglerFunctional } from './components/ThemeToggler';
 import ThemeContextProvider from './context/ThemeContext';
-import ThemeToggler from './components/ThemeToggler';
 import AuthContextProvider from './context/AuthContext';
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
     <div className="app">
       <ThemeContextProvider>
         <AuthContextProvider>
-          <Navbar />
-          <Booklist />
-          <ThemeToggler />  
+          <NavbarFunctional />
+          <BooklistFunctional />
+          <ThemeTogglerFunctional />  
         </AuthContextProvider> 
       </ThemeContextProvider>
     </div>

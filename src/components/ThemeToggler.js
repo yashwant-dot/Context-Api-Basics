@@ -1,5 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
+
+export const ThemeTogglerFunctional = () => {
+  const { toggleTheme } = useContext(ThemeContext);
+  return <button onClick={toggleTheme}>Toggle the theme</button>
+}
 
 export default class ThemeToggler extends Component {
 
